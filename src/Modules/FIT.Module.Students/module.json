@@ -1,0 +1,6 @@
+{
+    "id": "FIT.Module.Students",
+    "Name": "Student management",
+    "isBundledWithHost": true,
+    "version": "1.0.0"
+}

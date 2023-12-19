@@ -1,0 +1,12 @@
+[
+    {
+        "outputFileName": "wwwroot/admin/students.min.js",
+        "inputFiles": [
+        ],
+        "minify": {
+            "enabled": true,
+            "renameLocals": true
+        },
+        "sourceMap": false
+    }
+]
