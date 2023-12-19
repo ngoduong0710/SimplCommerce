@@ -35,10 +35,10 @@
                     </a>
                 </div>
                 <div class="col-10 col-md-5 col-lg-7 search-box">
-                    @await Component.InvokeAsync("SearchForm")
+                    @* @await Component.InvokeAsync("SearchForm") *@
                 </div>
                 <div class="col-2 col-md-1 cart-btn">
-                    @await Component.InvokeAsync("CartBadge")
+                    @* @await Component.InvokeAsync("CartBadge") *@
                 </div>
             </div>
         </div>
@@ -49,7 +49,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarMain">
-                @await Component.InvokeAsync("CategoryMenu")
+                @* @await Component.InvokeAsync("CategoryMenu") *@
             </div>
         </div>
     </div>
@@ -62,11 +62,11 @@
             <div class="row">
                 <div class="col-md-3">
                     <h4>@Localizer["Customer Service"]</h4>
-                    <vc:menu menu-id="1"></vc:menu>
+                    @* <vc:menu menu-id="1"></vc:menu> *@
                 </div>
                 <div class="col-md-3">
                     <h4>@Localizer["Information"]</h4>
-                    <vc:menu menu-id="2"></vc:menu>
+                    @* <vc:menu menu-id="2"></vc:menu> *@
                 </div>
                 <div class="col-md-6">
                     <h4>SimplCommerce</h4>
