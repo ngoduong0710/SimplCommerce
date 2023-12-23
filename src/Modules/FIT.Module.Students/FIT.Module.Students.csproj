@@ -4,5 +4,12 @@
         <ProjectReference Include="..\..\SimplCommerce.Infrastructure\SimplCommerce.Infrastructure.csproj" />
         <ProjectReference Include="..\SimplCommerce.Module.Core\SimplCommerce.Module.Core.csproj" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Areas\Students\Components\" />
+      <Folder Include="Areas\Students\Views\" />
+      <Folder Include="Areas\Students\ViewModels\" />
+      <Folder Include="Data\" />
+    </ItemGroup>
     
 </Project>

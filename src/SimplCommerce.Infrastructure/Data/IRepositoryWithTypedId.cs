@@ -21,5 +21,6 @@ namespace SimplCommerce.Infrastructure.Data
         Task SaveChangesAsync();
 
         void Remove(T entity);
+        void Update(T entity);
     }
 }

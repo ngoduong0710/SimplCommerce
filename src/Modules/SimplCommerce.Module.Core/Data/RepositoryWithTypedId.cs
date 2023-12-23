@@ -54,5 +54,10 @@ namespace SimplCommerce.Module.Core.Data
         {
             DbSet.Remove(entity);
         }
+
+        public void Update(T entity)
+        {
+            DbSet.Update(entity);
+        }
     }
 }
