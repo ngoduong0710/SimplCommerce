@@ -17,7 +17,24 @@ namespace FIT.Module.Students.Services
 
         public void Create(string studentId, string studentName, bool isMale, int age)
         {
-            throw new System.NotImplementedException();
+            Student student = new()
+            {
+                StudentID = studentId,
+                FullName = studentName,
+                isMale = isMale,
+                Age = age
+            };
+
+            var checkExist = _studentRepository.Query().FirstOrDefault(student => student.StudentID == studentId);
+            if (checkExist != null)
+            {
+                _studentRepository.Add(student);
+            }
+            else
+            {
+                throw new Exception("This student has been exits");
+            }
+
         }
 
         public void Delete(long id)
@@ -32,19 +49,24 @@ namespace FIT.Module.Students.Services
 
         public Student Get(long Id)
         {
-            throw new System.NotImplementedException();
+            var current = _studentRepository.Query()
+                .FirstOrDefault(student => student.Id == Id);
+            if (current == null)
+                throw new Exception("Student not found!");
+            else return current;
         }
 
         public IEnumerable<Student> GetAll()
         {
-            throw new System.NotImplementedException();
+            var students = _studentRepository.Query().ToList();
+            return students != null? students : throw new Exception("There are no students");
         }
 
         public void Update(long id, string studentId, string studentName, bool isMale, int age)
         {
             var current = _studentRepository.Query()
                 .FirstOrDefault(student => student.Id == id);
-            if (current == null) 
+            if (current == null)
                 throw new Exception("Student not found!");
             current.StudentID = studentId;
             current.FullName = studentName;
